@@ -1,0 +1,44 @@
+﻿@model List<WebServiceTest.Models.Clients>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>List Client</h2>
+
+<div class="">
+  
+    <div class="table-responsive">
+
+        @*<div class="card-block p-0">*@
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Nombre</th>
+                    <th>Apellido</th>
+                    <th>Pais</th>
+                    <th>Edad</th>
+                    <th>CEDULA</th>
+                    <th>Numbero</th>
+                
+
+                </tr>
+            </thead>
+            <tbody>
+
+                @foreach (var item in Model)
+                {
+                    <tr>
+                        <th>@Html.ActionLink("Agregar", "Client" , new { @class = "btn btn-primary btn-sm" })</th>
+                        <th>@item.Name</th>
+                        <td>@item.LastName</td>
+                        <td>@item.Country</td>
+                        <td>@item.Age</td>
+                        <td>@item.Number</td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+
+    </div>
+

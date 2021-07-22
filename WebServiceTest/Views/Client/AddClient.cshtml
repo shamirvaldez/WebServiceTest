@@ -1,0 +1,40 @@
+﻿@model WebServiceTest.Models.Clients
+
+@{
+    ViewBag.Title = "AddClient";
+}
+
+@using (Html.BeginForm("AddClient", "Clients", FormMethod.Post))
+{
+
+    <div class="list-group border-0">
+
+        
+        <div class="list-group-item p-0">
+            <div class="table-responsive p-0">
+                <table class="table mb-0">
+                    <tbody>
+                        <tr class="font-weight-bold">
+                            <!-- <th>Total:</th>-->
+                            <td class="text-left">
+                                <div class="input-group mb-3">
+                                    <div class="input-group-prepend">
+                                        <span class="input-group-text bg-white" id=">Total RD$</span>
+                                    </div>
+                                    @Html.TextBoxFor(p => p.Name, new { @class = "form-control" })
+                                </div>
+                                </div>
+                                    @Html.TextBoxFor(p => p.LastName, new { @class = "form-control" })
+                                </div>
+                            </td>
+                            <td><input type="submit" class="btn btn-dark btn-block sw-btn-next" value="Continuar" /></td>
+                        </tr>
+
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    Html.EndForm();
+}
+
